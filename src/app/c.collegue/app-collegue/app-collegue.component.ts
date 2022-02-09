@@ -16,11 +16,17 @@ export class AppCollegueComponent implements OnInit {
 
   @Input() c!: Collegue;
 
+
   incrementScore: number = 10;
   erreurVote: number = 10000;
 
+  @Input() count = this.incrementScore;
+
+
   ngOnInit(): void {
   }
+
+
 
   prendreEnCompteAvis(vote: Vote){
     // console.log(vote)

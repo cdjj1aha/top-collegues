@@ -15,7 +15,7 @@ export class AppComponent {
     };
   unDeuxiemeCollegue: Collegue = {
       pseudo: "pas pseudo",
-      score: -100,
+      score: -990,
       photoUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
     };
 }

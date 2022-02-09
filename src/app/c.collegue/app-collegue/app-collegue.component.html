@@ -8,4 +8,5 @@
 <div>Score : {{c.score}}</div>
 
 
-<app-avis (donnerUnAvisEvt)="prendreEnCompteAvis($event)"></app-avis>
+<app-avis (donnerUnAvisEvt)="prendreEnCompteAvis($event)" [desactivIncrement]="c.score >= 1000"
+  [desactivDecrement]="c.score <= -1000"></app-avis>

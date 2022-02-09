@@ -1,6 +1,6 @@
 import { Vote } from './../../models';
 import { outputAst } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-avis',
@@ -12,6 +12,9 @@ export class AppAvisComponent implements OnInit {
   constructor() { }
 
   @Output() donnerUnAvisEvt = new EventEmitter<Vote>();
+
+  @Input() desactivIncrement: boolean = false;
+  @Input() desactivDecrement: boolean = false;
 
   ngOnInit(): void {
   }
@@ -29,7 +32,7 @@ export class AppAvisComponent implements OnInit {
   }
 
   voteDeteste(){
-    //console.log("j'aime")
+    //console.log("je deteste")
     this.donnerUnAvisEvt.emit(Vote.DETESTER); // emission de l"evenement
 
   }
