@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Collegue } from './../../models';
+import { Collegue, Vote } from './../../models';
 
 
 @Component({
@@ -16,12 +16,31 @@ export class AppCollegueComponent implements OnInit {
 
   @Input() c!: Collegue;
 
+  incrementScore: number = 10;
+  erreurVote: number = 10000;
+
   ngOnInit(): void {
   }
 
-  prendreEnCompteAvis(){
-    console.log("avis donné")
-    this.c.score = this.c.score + 10;
+  prendreEnCompteAvis(vote: Vote){
+    // console.log(vote)
+
+    switch(vote) {
+      case Vote.AIMER: {
+        this.c.score = this.c.score + this.incrementScore;
+        break;
+      }
+      case Vote.DETESTER: {
+        this.c.score = this.c.score - this.incrementScore;
+        break;
+      }
+      default: {
+        this.c.score = this.incrementScore * this.erreurVote;
+        break;
+      }
+   }
+
+
   }
 
 

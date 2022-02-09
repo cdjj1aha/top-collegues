@@ -9,3 +9,8 @@ export interface Collegue {
   score: 1000,
   photoUrl: "https://randomuser.me/api/portraits/lego/0.jpg"
 }; */
+
+export enum Vote {
+  AIMER,
+  DETESTER
+}
