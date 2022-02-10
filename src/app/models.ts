@@ -29,7 +29,7 @@ export const tableauColleguesFictifs = [
   {
     pseudo: "lego 2",
     score: -528,
-    photoUrl: "https8://randomuser.me/api/portraits/lego/2.jpg"
+    photoUrl: "https://randomuser.me/api/portraits/lego/2.jpg"
   },
   {
     pseudo: "lego 3",
