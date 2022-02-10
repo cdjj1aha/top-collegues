@@ -20,7 +20,7 @@ export class AppCollegueComponent implements OnInit {
   incrementScore: number = 10;
   erreurVote: number = 10000;
 
-  @Input() count = this.incrementScore;
+  //@Input() count = this.incrementScore;
 
 
   ngOnInit(): void {

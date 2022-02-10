@@ -14,8 +14,29 @@ export class AppComponent {
       photoUrl: "https://randomuser.me/api/portraits/lego/0.jpg"
     };
   unDeuxiemeCollegue: Collegue = {
-      pseudo: "pas pseudo",
+      pseudo: "deux pseudo",
       score: -990,
       photoUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
     };
+
+// comment l'appeler dans app-liste-collegues.component.ts
+/*   tableauColleguesFictifs = [
+      {
+        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        pseudo:"Miaou1",
+        score:900
+      },
+      {
+        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        pseudo:"Miaou2",
+        score:900
+      },
+      {
+        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        pseudo:"Miaou3",
+        score:900
+      }
+    ]; */
+
+
 }
