@@ -6,6 +6,7 @@ import { AppAvisComponent } from './c.avis/app-avis/app-avis.component';
 import { AppCollegueComponent } from './c.collegue/app-collegue/app-collegue.component';
 import { AppListeColleguesComponent } from './c.listCollegue/app-liste-collegues/app-liste-collegues.component';
 import { AppAccueilComponent } from './c.accueil/app-accueil/app-accueil.component';
+import { ScorePipe } from './pipes/score.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppAccueilComponent } from './c.accueil/app-accueil/app-accueil.compone
     AppAvisComponent,
     AppCollegueComponent,
     AppListeColleguesComponent,
-    AppAccueilComponent
+    AppAccueilComponent,
+    ScorePipe
   ],
   imports: [
     BrowserModule

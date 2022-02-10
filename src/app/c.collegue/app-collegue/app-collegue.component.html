@@ -4,8 +4,8 @@
 <div><img src={{c.photoUrl}} class="rounded" alt="Photo du collègue" style="width:10%; height:auto">
 </div>
 
-<div>Pseudo : {{c.pseudo}}</div>
-<div>Score : {{c.score}}</div>
+<div>Pseudo : {{c.pseudo | uppercase}}</div>
+<div>Score : {{c.score | score}}</div>
 
 
 <app-avis (donnerUnAvisEvt)="prendreEnCompteAvis($event)" [desactivIncrement]="c.score >= 1000"
