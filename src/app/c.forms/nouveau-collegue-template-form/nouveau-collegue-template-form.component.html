@@ -1,0 +1,62 @@
+<!--
+  Pensez à rajouter dans \top-collegues\src\app\app.module.ts
+  imports: [
+    BrowserModule,
+    FormsModule   <= à ajoute pour désactiver le GET par défaut de la form
+  ],
+
+-->
+
+<p>nouveau-collegue-template-form works!</p>
+
+{{collegueForms | json }}
+<!-- <form #etatForm="ngForm" [ngFormOptions]="{updateOn: 'blur'}"></form> -->
+<!-- <form #etatForm="ngForm"> -->
+<form #etatForm="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
+  <div>Pseudo <input #etatPseudo="ngModel" type="text" name="pseudo" [(ngModel)]="collegueForms.pseudo" required></div>
+  <p *ngIf="etatPseudo.invalid">
+    champ est invalide.
+  </p>
+
+  <div>Nom <input #etatNom="ngModel" type="text" name="nom" [(ngModel)]="collegueForms.nom" required minlength="2"></div>
+  <!-- <p *ngIf="etatNom.invalid  && (etatNom.touched || etatNom.dirty)">
+    champ est invalide.
+  </p> -->
+
+  <div *ngIf="etatNom.invalid  && (etatNom.touched || etatNom.dirty)" class="alert">
+
+    <div *ngIf="etatNom.errors?.['required']">
+      Name is required.
+    </div>
+
+    <div *ngIf="etatNom.errors?.['minlength']">
+      Name must be at least 2 characters long.
+    </div>
+<!--
+    <div *ngIf="name.errors?.['forbiddenName']">
+      Name cannot be Bob.
+    </div>
+ -->
+  </div>
+
+
+
+
+  <div>Prenom <input #etatPrenom="ngModel" type="text" name="prenom" [(ngModel)]="collegueForms.prenom" required minlength="2"></div>
+  <p *ngIf="etatPrenom.invalid">
+    champ est invalide.
+  </p>
+  <div>PhotUrl <input #etatPhotoUrl="ngModel" type="text" name="photo" [(ngModel)]="collegueForms.photo" required></div>
+  <p *ngIf="etatPhotoUrl.invalid">
+    champ est invalide.
+  </p>
+  <button name="btn">Ajouter</button>
+
+
+  <hr>
+  <p *ngIf="etatForm.invalid">
+    Au moins un champ est invalide.
+  </p>
+
+</form>
+

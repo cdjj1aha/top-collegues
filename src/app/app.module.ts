@@ -10,6 +10,7 @@ import { ScorePipe } from './pipes/score.pipe';
 //import { NouveauCollegueTemplateFormComponent } from './c.forms/nouveau-collegue-template-form/nouveau-collegue-template-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RafraichirComponent } from './rafraichir/rafraichir.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppListeColleguesComponent,
     AppAccueilComponent,
     ScorePipe,
+    RafraichirComponent,
     //NouveauCollegueTemplateFormComponent
   ],
   imports: [

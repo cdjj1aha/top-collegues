@@ -54,13 +54,21 @@ export class AppListeColleguesComponent implements OnInit {
     }
 
   ngOnInit(): void {
+
 /*     setTimeout(()=> {
       //this.collegues = tableauColleguesFictifs;
       this.collegues;
     }, 3000); */
 
+    // this.rafraichir();
 
+    this.collegues = this.dateSrv.abonnerFluxTabCollegues();
 
   }
+
+/*   rafraichir () {
+    this.collegues = this.dateSrv.listerCollegues()
+                            .pipe(delay(3000));
+      } */
 
 }
