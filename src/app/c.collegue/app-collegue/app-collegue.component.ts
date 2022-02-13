@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { provideRoutes } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 import { Collegue, Vote } from './../../models';
 
 
@@ -6,11 +8,12 @@ import { Collegue, Vote } from './../../models';
   selector: 'app-collegue',
   templateUrl: './app-collegue.component.html',
   styleUrls: ['./app-collegue.component.scss']
+  // /* ,providers: DataService */ <= permet de définir un service intiment lié à un composants
 })
 
 export class AppCollegueComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataSrv: DataService) { }
 
   //@Input() collegue?: Collegue; => fonctionne avec un ngif si Collegue est undefined
 
@@ -31,7 +34,7 @@ export class AppCollegueComponent implements OnInit {
   prendreEnCompteAvis(vote: Vote){
     // console.log(vote)
 
-    switch(vote) {
+/*     switch(vote) {
       case Vote.AIMER: {
         this.c.score = this.c.score + this.incrementScore;
         break;
@@ -44,10 +47,18 @@ export class AppCollegueComponent implements OnInit {
         this.c.score = this.incrementScore * this.erreurVote;
         break;
       }
-   }
+   } */
+
+  if(this.c){
+    this.dataSrv.donnerUnAvis(this.c, vote)
+      .subscribe(
+        collegueSurServeur => this.c = collegueSurServeur
+      );
+  };
 
 
   }
+
 
 
 }

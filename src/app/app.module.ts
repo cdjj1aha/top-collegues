@@ -7,6 +7,9 @@ import { AppCollegueComponent } from './c.collegue/app-collegue/app-collegue.com
 import { AppListeColleguesComponent } from './c.listCollegue/app-liste-collegues/app-liste-collegues.component';
 import { AppAccueilComponent } from './c.accueil/app-accueil/app-accueil.component';
 import { ScorePipe } from './pipes/score.pipe';
+import { NouveauCollegueTemplateFormComponent } from './c.forms/nouveau-collegue-template-form/nouveau-collegue-template-form.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { ScorePipe } from './pipes/score.pipe';
     AppCollegueComponent,
     AppListeColleguesComponent,
     AppAccueilComponent,
-    ScorePipe
+    ScorePipe,
+    NouveauCollegueTemplateFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
