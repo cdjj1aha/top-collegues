@@ -1,4 +1,28 @@
 <!-- <p>app-liste-collegues works!</p> -->
 <!-- <app-collegue [c]="unCollegue"></app-collegue>
 <app-collegue [c]="unDeuxiemeCollegue"></app-collegue> -->
-<app-collegue *ngFor="let collegueVenantDuTableau of collegues" [c]="collegueVenantDuTableau"></app-collegue>
+
+<!-- <p *ngIf="collegues.length === 0"> -->
+<!-- <p *ngIf="!collegues">
+  setTimeout de 3s pour
+  Chargement des collegues...
+</p> -->
+
+<ng-template #tabCollegueAbsent  >
+  <!-- <p *ngIf="tabCollegues"> -->
+    setTimeout de 3s pour
+    Chargement des collegues...
+  <!-- </p> -->
+</ng-template>
+
+<ng-container *ngIf="collegues | async as tabCollegues; else tabCollegueAbsent">
+
+  <p *ngIf="tabCollegues.length === 0">
+      Pas de Data dans tabCollegues...
+  </p>
+
+  <app-collegue *ngFor="let collegueVenantDuTableau of tabCollegues" [c]="collegueVenantDuTableau"></app-collegue>
+
+</ng-container>
+
+

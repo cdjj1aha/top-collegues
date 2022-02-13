@@ -8,31 +8,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'top-collegues';
-  unCollegue: Collegue = {
+/*   unCollegue: Collegue = {
       pseudo: "un pseudo",
       score: 1000,
-      photoUrl: "https://randomuser.me/api/portraits/lego/0.jpg"
+      photo: "https://randomuser.me/api/portraits/lego/0.jpg"
     };
   unDeuxiemeCollegue: Collegue = {
       pseudo: "deux pseudo",
       score: -990,
-      photoUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
-    };
+      photo: "https://randomuser.me/api/portraits/lego/1.jpg"
+    }; */
 
 // comment l'appeler dans app-liste-collegues.component.ts
 /*   tableauColleguesFictifs = [
       {
-        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        photo:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
         pseudo:"Miaou1",
         score:900
       },
       {
-        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        photo:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
         pseudo:"Miaou2",
         score:900
       },
       {
-        photoUrl:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
+        photo:"https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg",
         pseudo:"Miaou3",
         score:900
       }
