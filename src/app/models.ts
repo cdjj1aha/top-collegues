@@ -9,7 +9,7 @@ export interface CollegueForms {
   pseudo: string;
   nom: string;
   prenom: string;
-  photo: string;
+  photo: string
 };
 
 /* export const unCollegue: Collegue = {

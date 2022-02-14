@@ -8,14 +8,8 @@
   Chargement des collegues...
 </p> -->
 
-<ng-template #tabCollegueAbsent  >
-  <!-- <p *ngIf="tabCollegues"> -->
-    setTimeout de 3s pour
-    Chargement des collegues...
-  <!-- </p> -->
-</ng-template>
 
-<ng-container *ngIf="collegues | async as tabCollegues; else tabCollegueAbsent">
+<ng-container *ngIf="collegues | async as tabCollegues">
 
   <p *ngIf="tabCollegues.length === 0">
       Pas de Data dans tabCollegues...

@@ -1,3 +1,4 @@
+import { CollegueForms } from './../models';
 import { Collegue, Vote } from 'src/app/models';
 import { Injectable } from '@angular/core';
 import { delay, interval, Observable, Subject } from 'rxjs';
@@ -38,25 +39,40 @@ export class DataService {
   }
 
   donnerUnAvis(collegue: Collegue, avis: Vote): Observable<Collegue> {
-        return this.http.post<Collegue>("https://formation-angular-collegues.herokuapp.com/api/v1/votes", {
-      avis,
-      pseudo: collegue.pseudo
-    }
+    return this.http.post<Collegue>("https://formation-angular-collegues.herokuapp.com/api/v1/votes", {
+        avis,
+        pseudo: collegue.pseudo
+      }
     );
   }
 
-  rafraichirListeCOllegues(){
-    //this.busTabCollegues.next([]);
-    this.listerCollegues()
-      .pipe(
-        delay(3000)
-      )
-      .subscribe(
-        colleguesServeur => this.busTabCollegues.next(colleguesServeur)
-      )
-
+  //ajouterCollegue(collegue: CollegueForms): Observable<CollegueForms> {
+  ajouterCollegue(collegue: CollegueForms){
+    return this.http.post<CollegueForms>("https://formation-angular-collegues.herokuapp.com/api/v1/collegues", {
+        collegue
+      }
+    );
   }
 
+  rafraichirListeCollegues(){
+    //this.busTabCollegues.next([]);
+    // this.listerCollegues()
+    //   .pipe(
+    //     delay(3000)
+    //   )
+    //   .subscribe(
+    //     colleguesServeur => this.busTabCollegues.next(colleguesServeur)
+    //   )
+
+    this.listerCollegues()
+    // .pipe(
+    //   delay(3000)
+    // )
+    .subscribe(
+      colleguesServeur => this.busTabCollegues.next(colleguesServeur)
+    )
+
+  }
 
   abonnerFluxTabCollegues(): Observable<Collegue[]> {
     //throw new Error('Method not implemented.');

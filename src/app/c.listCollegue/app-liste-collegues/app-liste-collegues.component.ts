@@ -45,11 +45,13 @@ export class AppListeColleguesComponent implements OnInit {
     this.collegues = of([])
                       .pipe(delay(3000)); */
 
-      //const obs$ = this.dateSrv.listerCollegues();
-      //console.log(obs$);
-      //obs$.subscribe();
-      this.collegues = this.dateSrv.listerCollegues()
-                            .pipe(delay(3000));
+      // const obs$ = this.dateSrv.listerCollegues();
+      // console.log(obs$);
+      // obs$.subscribe();
+      // this.collegues = this.dateSrv.listerCollegues()
+      //                       .pipe(delay(3000));
+      this.collegues = this.dateSrv.listerCollegues();
+
 
     }
 
@@ -62,10 +64,12 @@ export class AppListeColleguesComponent implements OnInit {
 
     // this.rafraichir();
 
-    this.collegues = this.dateSrv.abonnerFluxTabCollegues();
+/* TP 5 : A reactiver pour utiliser le principe de l'abonemnt */
+    //this.collegues = this.dateSrv.abonnerFluxTabCollegues();
 
   }
 
+/* TP 5 : A reactiver pour utiliser le principe de l'abonemnt */
 /*   rafraichir () {
     this.collegues = this.dateSrv.listerCollegues()
                             .pipe(delay(3000));

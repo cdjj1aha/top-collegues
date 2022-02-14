@@ -46,3 +46,6 @@ src/app/app.component copy.html
 src/favicon copy.ico
 src/app/app.component TP15.html
 src/app/app.module.ts.TP 15
+src/app/c.accueil/app-accueil/app-accueil.component copy.html
+src/app/c.accueil/app-accueil/app-accueil.component copy 2.html
+src/app/c.listCollegue/app-liste-collegues/app-liste-collegues.component copy.html

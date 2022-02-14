@@ -27,6 +27,6 @@ export class AppAccueilComponent implements OnInit {
 
   actualiser(){
     //this.dataSrv.abonnerFluxTabCollegues();
-    this.dataSrv.rafraichirListeCOllegues();
+    this.dataSrv.rafraichirListeCollegues();
   }
 }

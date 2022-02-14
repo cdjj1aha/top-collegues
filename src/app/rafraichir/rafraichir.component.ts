@@ -14,7 +14,7 @@ export class RafraichirComponent implements OnInit {
   }
 
   rafraichir(){
-    this.dataSrv.rafraichirListeCOllegues();
+    this.dataSrv.rafraichirListeCollegues();
   }
 
 }
